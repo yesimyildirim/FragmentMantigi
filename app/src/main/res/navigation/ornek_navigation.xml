@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ornek_navigation"
+    app:startDestination="@id/liste">
+    <fragment
+        android:id="@+id/liste"
+        android:name="com.yesimyildirim.fragmentmantigi.Liste"
+        android:label="fragment_liste"
+        tools:layout="@layout/fragment_liste" >
+        <action
+            android:id="@+id/action_liste_to_detay"
+            app:destination="@id/detay" />
+    </fragment>
+    <fragment
+        android:id="@+id/detay"
+        android:name="com.yesimyildirim.fragmentmantigi.Detay"
+        android:label="fragment_detay"
+        tools:layout="@layout/fragment_detay" >
+        <action
+            android:id="@+id/action_detay_to_liste"
+            app:destination="@id/liste" />
+    </fragment>
+</navigation>
